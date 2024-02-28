@@ -17,7 +17,11 @@ export default function NavBar() {
         className='object-contain'
         />
     </Link>
-
+<CustomButton 
+title="Sign In"
+btnType='button'
+containerStyles='text-primary-bule rounded-full sm:bg-gray-100 lg:bg-white min-w-[130px]'
+/>
 </nav>
    </header>
   )
