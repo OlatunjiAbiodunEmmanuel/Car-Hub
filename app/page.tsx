@@ -1,3 +1,4 @@
+import CarCard from "@/components/CarCard";
 import CustomeFilter from "@/components/CustomeFilter";
 import Hero from "@/components/Hero";
 import SearchBar from "@/components/SearchBar";
@@ -26,7 +27,11 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars;
 
     { !isDataEmpty ? (
       <section>
-        WE HAVE CARS
+        <div className="home__cars-wrapper">
+        {
+          allCars?.map((car)=> (<CarCard car={car} />))
+        }
+        </div>
       </section>
     ) :  (
       <div className="home__eror-container">
