@@ -41,8 +41,18 @@ export default function CarDetails({isOpen, closeModal, car}: CarDetailsProps) {
           leaveTo='opacity-0 scale-95'
           >
             
-            <Dialog.Panel>
-              <button>
+            <Dialog.Panel className="relative w-full max-w-lg maxh-[90vh] overflow-y-auto transform rounded-2xl bg-white">
+              <button
+              type='button'
+              onClick={closeModal}
+              >
+                <Image src='/close.svg'
+                alt='close'
+                width={20}
+                height={20}
+                className='object-contain'
+                />
+
                 
               </button>
             </Dialog.Panel>
